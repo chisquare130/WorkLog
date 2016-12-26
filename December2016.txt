@@ -1,13 +1,28 @@
 12/22/2016:
 Luminosity Check:
-		做了一些图，来进行数据质量检测。但是似乎我测的物理量不太对，需要根据苑老师的邮件改动。
-		需要脚本自动化。
+		-做了一些图，来进行数据质量检测，给苑老师发了邮件。
+		-苑老师回邮件提出了修改意见：E_mdc -> p_mdc, MDC_momentum, dE/dx, TOF, MRPC(endcap), EMC. See pdf for examples.
+		-需要脚本自动化。
 		
 		
-		逐Run跑了一下161216的快速重建数据，发现大部分的Run的Online亮度比Offline亮度低了13%，只有一个Run高了40%。
-		张老师建议我再用旧的数据检查一下我的程序。
+		-逐Run跑了一下161216的快速重建数据，发现大部分的Run的Online亮度比Offline亮度低了13%，只有一个Run高了40%。
+		-张老师建议我再用旧的数据检查一下我的程序。
+		
 		
 12/23/2016:
 Luminosity Check:
-		没有找到3686的Bhabha MC，所以我通过从InMC中筛选MC Truth来获取Bhabha MC。
+		-没有找到3686的Bhabha MC，所以我通过从Inclusive MC中筛选Truth信息来获取Bhabha MC。
+		-12 data of Run 25338~25402, 09MC Run 8093~9025
+		
+12/26/2016:
+KsKl:
+		-measured mKs of SignalMC：	no problem
+		-lxslc5跑前台很慢
+		-反冲能量很高，因此对反冲质量对反冲能量很敏感。
+		-发现之前的问题在于没考虑总动量的px成分。
+		-提交了data和Inclusive MC。
+		
+		
+Luminosity Check:
+		-不知道为什么，周五跑出来的数据没法hadd。可能是因为lxslc和BOSS版本不同？
 		
