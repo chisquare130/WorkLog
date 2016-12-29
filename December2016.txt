@@ -24,5 +24,50 @@ KsKl:
 		
 		
 Luminosity Check:
+		-用InMC获取Bhabha MC失败，InMC中并不包含Bhabha MC。
 		-不知道为什么，周五跑出来的数据没法hadd。可能是因为lxslc和BOSS版本不同？
+			-BOSS702下的数据仅能在702下跑。
+		
+2016/12/27
+KsKl:
+		-质心系中的pKs
+		-mKs分辨	优化
+		
+Luminosity Check:
+		-用Babayaga产生了3686和4190的Bhabha MC。702下不能运行Sim，只能在664下运行。
+		-phi_mdc	质心系
+		-p的分辨
+		
+gKsKpi:
+		-mKs分辨
+		-Major Backgrounds:	psi'->gXc1, psi'->Jpsi pipi, Jpsi->mumu/ee/(KK), K1K, K*K
+		-提交了gXc1,gKsKs,KsKpi,JpsiNeutral,KsKpipi0的ana
+		
+		
+2016/12/28
+将lxslc5和lxslc6的环境设置自动化了
+
+Luminosity Check:
+		-for 3686MC, effi=14.39%;	for 4190MC, effi=14.35%
+		-算3686的效率时需要考虑psip->ee
+		-3686和3650的粗略计算结果显示我测得的结果比高清的结果偏大15%左右
+		
+		Round Table上提出了一些问题：
+			cutFlow;
+			cut的变量的分布；
+			Liu Jingyi表格的正确性；
+			立体角
+			产生子截面。
+
+			原MC文件在不在
+			Babayaga参数：角度cut
+			发ppt：jobOption,图。
+			
+		-改正了3686和4190MC的Run号，重新提交了sim,rec
+		-
+		
+KsKl:
+		-改了程序，解除了mKs的cut，存了boosted pKs和recoil	跑了Signal,+pi0,+2pi0的MC
+		-之前交的程序没有Ana成功，因为双版本的时候我忘记了自动source环境，所以需要重新交
+	
 		
