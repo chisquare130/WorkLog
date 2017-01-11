@@ -26,3 +26,63 @@ Luminosity Check:
 		
 		-所有的修正都考虑了之后，和高清的结果差别在1%以内。
 		-平老师让我跑一跑双光子事例，做个验证。
+		-Babayaga产生子截面，平老师认为应该用Unweighted。可能导致1%的差别。
+		
+2017/1/6
+Luminosity Check：
+		-Vertex Fit的问题搞得昨天交的作业有错误。
+		-今天早上重新跑了1216~1226的数据 Run号47543~47788
+		-4190的截面424.0(Unweighted), 424.4(Weighted)
+		
+		151,150,83,84,156,158	:	对应run号		47550~47552,47747,47748,47743,47742,47741,47647,47648
+		
+		Online Lum:
+			47543 start at 	10876.843
+			47651 start at  10982.455									105.612
+			47758 start at  11076.893									94.44 since Run.47651
+			47788 end at	11091.495									214.652 in total	(109.040 since Run.47651) 
+			47641 end at 	10983.036
+
+		
+			The 10 bad runs:	
+				47748~47747:	70.327-68.13			2.197
+				47743~47741: 	65.231-60.739			4.492
+				47647,47648:	980.998-978.146			2.852
+				47550~47552:	882.498-880.3			2.198			11.739 in total		(202.913 total)
+				
+				Offline of 47543~47641：		97896.7	-837.689
+				
+		-bad run太多，有些可能表现为程序成功运行但是对结果数字没有贡献，所以抛弃这个方法。
+		-给苑老师发邮件，拿了大概20个run的初步结果，大概是高6%~7%。
+		
+		
+2017/1/9
+Luminosity Check: 
+		-Should do a check with double gamma.
+			-digamma check use the 2nd criterion:	1.8/4.26 E_cms, |cos theta|<0.8, dphi in the range [5,40]产生了
+		-4190和3686的双gamma MC
+		-重新跑了快重建的数据。till 1226,无坏Run
+		
+			
+KsKl:
+		-hadd:	KsKlpi0, 2pi0KsKl, InMC，SignalMC确保；data_condor似乎是之前在lxslc6下hadd过，我试了一下lxslc5容量超限。
+		-写了新的画图脚本
+			
+			
+2017/1/10
+Luminosity Check:
+		-Draw_all.C 将MC成分由line改为point,增强对比
+		-Run 47543-47650: Online 105.612, Offline 112.689; Online 109.040 Offline 111.924
+
+		需要做一下Digamma,对比一下结果的亮度；
+		另外需要用前后数据的分布的对比来看看数据不一致是什么问题
+		
+KsKl:
+		-检查出了一个错误，把衰变长度这个条件取消了，但是没存这个变量，需要重新跑。
+		-重新交了SignalMC,KsKlpi0,InclusiveMC,2pi0KsKl,Data
+		
+
+2017/1/11
+Luminosity Check:
+		-写了Digamma的分析程序；交了3686MC,4190MC,数据
+		-改了Draw_all脚本，来
