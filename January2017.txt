@@ -85,4 +85,48 @@ KsKl:
 2017/1/11
 Luminosity Check:
 		-写了Digamma的分析程序；交了3686MC,4190MC,数据
-		-改了Draw_all脚本，来
+		-改了Draw_all脚本，来对比4190前后两部分的数据。发现有些区别，但是无法理解。
+		-还是应该通过双光子过程来验证我的结果，如果结果对的上，那么我就不管了。
+		-唐光毅学长发了个逐Run读取Online亮度的程序。
+		
+2017/1/14
+KsKl:
+		-hadd:	InMC有两个dst有问题；SignalMC有1个有问题		data_condor的805有问题
+		-看了一下动量谱，加上了1.78到1.86的限制条件，发现基本没有事例了。
+		
+		-Criteria:
+			-2 Good Track, 0 Charge.
+			-Second Vertex Fit: chisq<200, len>0.5cm
+			-Delta KsMass<10 MeV
+			-Deposit Energy outside a cone (theta=10 degree) < 30 MeV
+			-Boosted Ks Momentum within [1.78, 1.86]
+			
+		-似乎有Bhabha本底，今天交了sim，明天看一看。
+		
+2017/1/15
+Luminosity:
+		-Absent dst files: 47762-016, 47786-009,010,	47760-014,015, 47749-016,017
+	
+2017/1/16
+苑老师昨日报告的回复：
+		-Energy deposit: gamma energy 40 MeV的cut应当取消；
+		-检查一下为什么KsKpi和KsKl的KsMass谱的分辨不一样；是否和Ks的动量有关
+		-数据中pKs>1.75的PID；看看是否是Bhabha事例的影响
+		-recoil mass in CM frame
+		-Di-gamma的图
+		-用psi'的数据来检查KsKl的信号，以此优化条件。
+		
+2017/1/17
+Luminosity:
+		-4200 Test:
+			Offline: 39.688	without update on Effi*MC_CS;		online:	run 48273~48328:	11481.482 - 11442.137=39.344
+			Offline is 0.9% larger
+		-画了Digamma的图
+		-跑了目前所有的4190数据
+		
+		误差：
+			-截面的误差，	文件里给了
+			-MC效率的误差：	统计量
+			-事例数的误差
+			
+		4190 CrossSection:		424.0+-3.55 Unweighted,	424.40+-1.35 Weighted
