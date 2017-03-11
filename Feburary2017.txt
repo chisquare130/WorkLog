@@ -1,0 +1,81 @@
+2017/2/13
+KsKl:
+	-跑了Psip的数据；
+
+	
+Luminosity:
+	-跑了4200的数据； RunNo 48172-48713
+	
+2017/2/14
+Luminosity:
+	-Quoting Pingrg:	Weighted = phasespace,	unweighted:	考虑抽样的有限性，与抽样的数据一一对应
+
+KsKl:
+	-Bhabha需要重交ana，ana.txt中的dst文件名错了
+	-SignalMC, KsKlpi0,data_condor需要重交Ana：更新，取消gamma min energy cut		
+			==>	Done for SignalMC, KsKlpi0
+	
+下一步该做的事：
+	-再跑一次4200 Luminosity,上一次差十几个Run
+	-Digamma Graphs，脚本自动化
+	-Different CosTheta Cuts:	更细致的检查，具体是哪段区间
+	-EPratio的左边尾巴是什么原因
+	-gKsKpi
+	-KsKl：更新root，画图; 检查双光子；研究如何去除Bhabha和双光子;确认是否boosted
+	-数据质量检测，run vs. dE/dx ...
+	
+2017/2/15
+Luminosity:
+	-写了一个脚本，用来读取dstlist并查找missing的文件；这个脚本(ts/Luminosity/FindMissingDst.C)可以作为我以后TString代码的样例。
+		-另，我应该把学习文档单独拿出来，并且扔到github上。
+		
+3月年会上报告：
+	-平行会议亮度报告：细节
+	-总会场提供一张图：run by run Online/Offline comparison；并给出总的积分亮度数值
+	-gKsKpi
+	
+2017/2/20 
+最近/scratchfs盘很慢，我就检查了一下我占用的空间，发现已经超过了500G。没有特别好删的东西。我只有注意以后产生MC时量少一些了。
+
+KsKl:
+	跑了Digamma
+	
+2017/2/21
+KsKl:
+
+Luminosity:
+	Data Quality Check:
+		-MDC:	Momentum vs run, deltaP vs run, momentum vs theta, deltaP vs theta, Momentum vs phi, deltaP vs run,	 (ich = +/- 1)
+				- find dead cells ( via p vs phi, dp vs phi)
+		-dE/dx, PHMP11 vs run, 
+		-TOF vs run,
+		
+	Difference in MC/Data for thetap in [0.8,0.93]
+	
+2017/2/25
+Luminosity:
+	-4200,4190数据之前不小心遗失，重新跑4190;
+	-4210数据
+	-bhabha能谱Endcap不正常：和phi角关系
+	-之前卡范围时，犯了个很愚蠢的错误 & / &&		导致我0.89到0.91范围的图没有。
+	-试了的方法hist2D取ProfileX的方法，失败了。拿不到Handle，DrawOption的问题解决不了；而且它用的也是求平均的方法。
+KsKl:
+	
+	
+2017/2/27
+Luminosity:
+	-fDraw_run.C:	通过拟合方法得到p, sigmaP vs Run/phi/theta的情况；	并且整合了不做fit的图样
+	
+	
+2017/2/28
+Luminosity:
+	-Updated MC Crosssections with 100000 events: 
+		@4210: Unweighted 418.7+-1.1, Weighted 418.7+-0.4
+		@4200: Unweighted 420.5+-1.1, Weighted 420.7+-0.4
+		@4190: Unweighted 422.6+-1.1, Weighted 422.3+-0.4
+	
+	-重新跑了一下4210MC的Sim，之前可能因为使用的Run号缺少信息而不成功
+	
+KsKl:
+	-重交了作业,之前的gamma最低能量的bug没有改
+	-

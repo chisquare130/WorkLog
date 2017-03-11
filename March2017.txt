@@ -1,0 +1,60 @@
+3/1/2017:
+Luminosity:
+	-下周二要做一个Data Quality的报告
+	-读取EMC ID中的theta和phi，
+	-跑一跑以前4260之类的数据，看看MC/data不符是否也不存在。
+
+Workshop:
+	-为了提高做ppt的效率，可以参考沈培迅在今天的Charmonium会上做的报告。
+	
+3/6/2017:
+Luminosity:
+	-ToF vs Theta:	some bins doesn't fit well. Wanted to extract the distribution in those bins, only found out that they had negative sigma error
+	
+	
+3/11/2017:
+要做的事：
+	gKsKpi:
+		-重改程序：
+			检查选择条件，查bug，变量的存储(Save MC Truth)
+		-跑数据和MC
+		-写脚本；
+		-写报告：
+
+	亮度测量的报告：
+		-周一把分会报告发给Ryan
+		-美化图
+		-提纲：
+			*筛选条件
+			*亮度结果
+			*数据质量监测
+				-图
+				-可能说明的问题
+
+	在笔记本上装Latex
+				
+
+gKsKpi:
+	筛选条件：
+		1. 4条带电径迹，总带电量为0
+		2. Photon:	TDC, 20度，最小能量
+		3. Ks: Vertex Fit, iterate all 4 possibilities,
+				粗选M_rec 在 +-15MeV的Mass Window，	(作图 M_rec: data vs inc MC)
+				chi2_vertex<30, chi2_IP<30, M_rec<+-7	(作图 mc: chi2)
+				Best candidate: min sum of chi2 
+				decay length>0.5cm (作图：Decay Length)
+				Reject Ks0Ks0：Other pair not good
+		4. Chi2 fit:
+				iterate: (K+pi-, K-pi+), gamma
+				Choose min: chi2(4C)+Chi2(PID_K)+Chi2(PID_pi)	(作2D图MC: chi_right vs chi_wrong) 
+				(作图： MC vs Data: chi_4c vs chi_total)
+				
+				
+	文件：	跑了09Exclusive,gXc1的sim/rec，
+			KsKpi,gXc2,JpsiNeutral,pi0KsKpi,09data,09inMC 的Ana
+				
+				
+Luminosity of New Data:
+	1.可能是dE/dx刻度常数用错了
+	2.因为server问题，4200和4210有两个文件有问题，重跑
+	
